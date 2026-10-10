@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #12132b;
+  --color-ink-light: #1c1e42;
+  --color-amber: #f6a82f;
+  --color-amber-light: #ffc766;
+  --color-coral: #ff6f5e;
+  --color-paper: #fbf8f2;
+  --color-slate: #23253d;
+  --color-slate-soft: #55577a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-slate);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Single orchestrated hero entrance — staggered via inline animation-delay */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--color-amber);
+  color: var(--color-ink);
+}
