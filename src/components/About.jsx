@@ -1,5 +1,4 @@
 import { about } from "../data/siteContent";
-
 function About() {
   return (
     <section id="about" className="bg-paper py-24">

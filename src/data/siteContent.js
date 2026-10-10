@@ -4,21 +4,21 @@
 import digitalProgramImage from "../assets/images/digital.png";
 export const nav = {
   links: [
-    { label: "About", href: "#about" },
-    { label: "Programs", href: "#programs" },
-    { label: "Impact", href: "#impact" },
-    { label: "Stories", href: "#stories" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "/about" },
+    { label: "Programs", href: "/programs" },
+    { label: "Impact", href: "/impact" },
+    { label: "Stories", href: "/stories" },
+    { label: "Contact", href: "/contact" },
   ],
-  cta: { label: "Get involved", href: "#contact" },
+  cta: { label: "Get involved", href: "/contact" },
 };
 
 export const hero = {
   kicker: "Bo Southern, Sierra Leone",
   headline: "Young people are building what comes next.",
   sub: "Aspire! gives Sierra Leone's next generation the skills, mentors, and workspace to turn an idea into a livelihood in tech, business, media, and civic life.",
-  primaryCta: { label: "Join a program", href: "#programs" },
-  secondaryCta: { label: "Partner with us", href: "#contact" },
+  primaryCta: { label: "Join a program", href: "/programs" },
+  secondaryCta: { label: "Partner with us", href: "/contact" },
   stats: [
     { value: "1,200+", label: "youth trained since 2024" },
     { value: "65", label: "ventures launched" },
@@ -149,15 +149,15 @@ export const footer = {
   columns: [
     {
       heading: "Programs",
-      links: programs.map((p) => ({ label: p.name, href: "#programs" })),
+      links: programs.map((p) => ({ label: p.name, href: "/programs" })),
     },
     {
       heading: "Organization",
       links: [
-        { label: "About", href: "#about" },
-        { label: "Impact", href: "#impact" },
-        { label: "Stories", href: "#stories" },
-        { label: "Contact", href: "#contact" },
+        { label: "About", href: "/about" },
+        { label: "Impact", href: "/impact" },
+        { label: "Stories", href: "/stories" },
+        { label: "Contact", href: "/contact" },
       ],
     },
   ],
