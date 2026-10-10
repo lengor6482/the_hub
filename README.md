@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aspire! Youth Empowerment and Innovation Hub
 
 Website source, built with React + Vite + Tailwind CSS v4.
@@ -33,3 +34,7 @@ To change any text on the site — headlines, stats, program names,
 testimonials, contact info — edit `src/data/siteContent.js`. You
 generally shouldn't need to touch the component files for content
 changes.
+=======
+# theHub
+building a website for a non-profit youth organization that are focused on building youth capacity. I'm using react, tailwind, and javascript for the frontend.
+>>>>>>> 76301c12f25d939899c3012232e4a289a13605aa
