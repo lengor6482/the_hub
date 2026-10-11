@@ -2,6 +2,7 @@ import { useState } from "react";
 import { nav } from "../data/siteContent";
 import AspireLogo from "../assets/AspireLogo.svg";
 import { NavLink } from "react-router-dom";
+import { programs } from "../data/siteContent";
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -12,15 +13,47 @@ function Navbar() {
           <img src={AspireLogo} alt="Aspire Logo" className="h-8 w-auto" />
         </NavLink>
         <nav className="hidden items-center gap-8 md:flex">
-          {nav.links.map((link) => (
-            <NavLink
-              key={link.label}
-              to={link.href}
-              className="text-sm text-white/70 transition-colors hover:text-white"
-            >
-              {link.label}
-            </NavLink>
-          ))}
+          {nav.links.map((link) =>
+            link.label === "Programs" ? (
+              // 1. `group` + `relative` on the wrapper
+              <div key={link.label} className="group relative">
+                <NavLink
+                  to={link.href}
+                  className="text-sm text-white/70 transition-colors hover:text-white"
+                >
+                  {link.label} <span aria-hidden="true">▾</span>
+                </NavLink>
+
+                {/* 2. Panel: hidden by default, absolute below the link */}
+                <div
+                  className="invisible absolute left-0 top-full pt-4 opacity-0 transition-all duration-200
+                            group-hover:visible group-hover:opacity-100
+                            group-focus-within:visible group-focus-within:opacity-100"
+                >
+                  <ul className="w-72 rounded-xl border border-white/10 bg-ink p-2 shadow-xl">
+                    {programs.map((program) => (
+                      <li key={program.name}>
+                        <NavLink
+                          to="/programs"
+                          className="block rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5 hover:text-white"
+                        >
+                          {program.name}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <NavLink
+                key={link.label}
+                to={link.href}
+                className="text-sm text-white/70 transition-colors hover:text-white"
+              >
+                {link.label}
+              </NavLink>
+            )
+          )}
           <NavLink
             href={nav.cta.href}
             className="rounded-full bg-amber px-5 py-2 text-sm font-medium text-ink transition-colors hover:bg-amber-light"
