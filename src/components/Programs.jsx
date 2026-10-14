@@ -25,18 +25,17 @@ function Programs() {
                 <h3 className="mt-4 font-display text-2xl font-medium leading-snug">
                   {program.name}
                 </h3>
-                <p className="mt-2 text-sm text-white/50">{program.length}</p>
               </div>
 
               <div>
                 <p className="max-w-xl text-white/70">{program.description}</p>
                 <ul className="mt-4 flex flex-wrap gap-2">
-                  {program.focus.map((item) => (
+                  {program.focusAreas.map((area) => (
                     <li
-                      key={item}
+                      key={area.title}
                       className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/60"
                     >
-                      {item}
+                      {area.title}
                     </li>
                   ))}
                 </ul>

@@ -2,6 +2,57 @@
 // Update text, stats, and lists in this file — components read from it,
 // so most content changes never require touching component code.
 import digitalProgramImage from "../assets/images/digital.png";
+export const programs = [
+  {
+    id: "digital",
+    name: "Digital and Innovation Program",
+    short: "DIP",
+    image: digitalProgramImage,
+    description:
+      "From basic computer literacy to coding, design and data skills, plus the entrepreneurship support and creative media training that help young people turn skills into income.",
+    focusAreas: [
+      { title: "Digital Skills Training program", text: "Learn the digital skills that are in demand in Sierra Leone's economy, from basic computer literacy to coding, design and data skills." },
+      { title: "Entrepreneurship", text: "Develop the entrepreneurial mindset and skills needed to start and grow a business." },
+      { title: "Digital Storytelling", text: "Learn how to use digital tools to tell compelling stories that can drive social change." },
+      { title: "Media for Peace", text: "Explore the role of media in promoting peace and conflict resolution in communities." },
+    ],
+    sdgs: ["No Poverty", "Quality Education", "Decent Work and Economic Growth", "Reduced Inequalities"],
+  },
+  {
+    id: "leadership",
+    name: "Leadership and Career Development",
+    short: "LCD",
+    image: digitalProgramImage,
+    description:
+      "Residential camps, mentorship and virtual learning that build the confidence and skills young people need to lead in their communities and careers.",
+    focusAreas: [
+      { title: "Aspire Youth Ambassador Leadership Camp", text: "Develop leadership skills and gain real-world experience through immersive residential camps." },
+      { title: "Personal Career Development Mentorship", text: "Receive personalized guidance and support to navigate your career path." },
+      { title: "Virtual Leadership Series", text: "Participate in online workshops and seminars to enhance your leadership capabilities." },
+    ],
+    sdgs: ["Quality Education", "Reduced Inequalities"],
+  },
+  {
+    id: "advocacy",
+    name: "Advocacy Engagement Program",
+    short: "AEP",
+    image: digitalProgramImage,
+    description:
+      "Youth-led campaigns and dialogues that tackle gender-based violence, substance abuse and climate change, and that bring young people into decision making.",
+    focusAreas: [
+      { title: "Gender-Based Violence", text: "Address the root causes and impacts of gender-based violence in our communities." },
+      { title: "Substance Abuse", text: "Explore the effects of substance abuse and promote healthy coping mechanisms." },
+      { title: "Peace and good Governance", text: "Understand the importance of peace and effective governance in building resilient communities." },
+      { title: "Climate Justice", text: "Examine the intersection of climate change and social justice." },
+    ],
+    sdgs: [       
+      "Gender-Based Violence",
+      "Substance Abuse",
+      "Peace and good Governance",
+      "Climate Justice",
+    ],
+  },
+];
 export const nav = {
   links: [
     { label: "About", href: "/about" },
@@ -46,40 +97,6 @@ export const about = {
   ],
 };
 
-export const programs = [
-  {
-    name: "Digital and Innovation Program",
-    image: digitalProgramImage,
-    //length: "12 weeks",
-    description:
-      "Computer literacy, Internet Safety, Microsoft Office, Graphic Design, Digital Marketing and freelancing fundamentals for young people starting a career in tech — no prior experience required.",
-    focus: ["Microsoft Office", "Graphic Design", "Hardware & internet basics"],
-  },
-  {
-    name: "Leadershp and Career Development",
-    image: digitalProgramImage,
-    //length: "10 weeks",
-    description:
-      "From idea to registered business: business planning, basic bookkeeping, and pitch training, ending in a micro-grant pitch day.",
-    focus: ["Business planning", "Bookkeeping & pricing", "Pitching for micro-grants"],
-  },
-  {
-    name: "Advocacy",
-    image: digitalProgramImage,
-    //length: "8 weeks",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in consectetur lorem, ac tempus purus. Orci varius natoqu",
-    focus: ["consectetur adipiscing elit", "consectetur lorem", "consectetur lorem"],
-  },
-  {
-    name: "Climate Justice",
-    image: digitalProgramImage,
-    //length: "6 months",
-    description:
-      "Community organizing, public speaking, and policy literacy for young people ready to take on a role in local government or their community.",
-    focus: ["Eco-Twist", "Solar Powered Stove", "Community Clean-Up"],
-  },
-];
 
 export const impact = {
   headline: "Nearly five years in, the numbers keep moving.",

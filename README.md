@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Aspire! Youth Empowerment and Innovation Hub
 
 Website source, built with React + Vite + Tailwind CSS v4.
@@ -37,4 +37,3 @@ changes.
 =======
 # theHub
 building a website for a non-profit youth organization that are focused on building youth capacity. I'm using react, tailwind, and javascript for the frontend.
->>>>>>> 76301c12f25d939899c3012232e4a289a13605aa
