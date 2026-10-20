@@ -55,8 +55,25 @@ export const programs = [
 ];
 export const nav = {
   links: [
-    { label: "About", href: "/about" },
-    { label: "Programs", href: "/programs" },
+    { 
+      label: "About", 
+      href: "/about",
+      children: [
+        { label: "Our Story", href: "/about#our-story" },
+        { label: "Mission and Vision", href: "/about#mission" },
+        { label: "Values", href: "/about#values" },
+        { label: "Team", href: "/about#team" },
+      ],
+    },
+
+    { 
+      label: "Programs", 
+      href: "/programs",
+      children: programs.map((p) => ({
+        label: p.name,
+        //href: `/programs#${p.id}`,
+      })),
+    },
     { label: "Impact", href: "/impact" },
     { label: "Stories", href: "/stories" },
     { label: "Contact", href: "/contact" },
@@ -166,7 +183,7 @@ export const footer = {
   columns: [
     {
       heading: "Programs",
-      links: programs.map((p) => ({ label: p.name, href: "/programs" })),
+      links: programs.map((program) => ({ label: program.name, href: `/programs#${program.id}` })),
     },
     {
       heading: "Organization",

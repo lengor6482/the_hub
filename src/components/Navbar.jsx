@@ -3,6 +3,8 @@ import { nav } from "../data/siteContent";
 import AspireLogo from "../assets/AspireLogo.svg";
 import { NavLink } from "react-router-dom";
 import { programs } from "../data/siteContent";
+
+
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -12,9 +14,11 @@ function Navbar() {
         <NavLink to="/" className="font-display text-2xl font-semibold text-white">
           <img src={AspireLogo} alt="Aspire Logo" className="h-8 w-auto" />
         </NavLink>
+
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
           {nav.links.map((link) =>
-            link.label === "Programs" ? (
+            link.children ? (
               // 1. `group` + `relative` on the wrapper
               <div key={link.label} className="group relative">
                 <NavLink
@@ -31,13 +35,13 @@ function Navbar() {
                             group-focus-within:visible group-focus-within:opacity-100"
                 >
                   <ul className="w-72 rounded-xl border border-white/10 bg-ink p-2 shadow-xl">
-                    {programs.map((program) => (
-                      <li key={program.name}>
+                    {link.children.map((child) => (
+                      <li key={child.label}>
                         <NavLink
-                          to="/programs"
+                          to={child.href}
                           className="block rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5 hover:text-white"
                         >
-                          {program.name}
+                          {child.label}
                         </NavLink>
                       </li>
                     ))}
@@ -62,6 +66,7 @@ function Navbar() {
           </NavLink>
         </nav>
 
+        {/* Hamburger Button */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -81,14 +86,14 @@ function Navbar() {
 
       {open && (
         <nav className="flex flex-col gap-1 border-t border-white/10 bg-ink px-6 py-4 md:hidden">
-          {nav.links.map((link) => (
+          {nav.links.map((child) => (
             <NavLink
-              key={link.label}
-              to={link.href}
+              key={child.label}
+              to={child.href}
               onClick={() => setOpen(false)}
               className="rounded-lg px-2 py-3 text-white/80 hover:bg-white/5 hover:text-white"
             >
-              {link.label}
+              {child.label}
             </NavLink>
           ))}
           <NavLink
