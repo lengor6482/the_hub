@@ -59,7 +59,7 @@ export const nav = {
       label: "About", 
       href: "/about",
       children: [
-        { label: "Our Story", href: "/about#our-story" },
+        { label: "Our Story", href: "/about#story" },
         { label: "Mission and Vision", href: "/about#mission" },
         { label: "Values", href: "/about#values" },
         { label: "Team", href: "/about#team" },
@@ -114,6 +114,52 @@ export const about = {
   ],
 };
 
+export const story = {
+  headline: "Born from the energy of Sierra Leone's youth.",
+  motto: "Igniting youth power for change.",
+  paragraphs: [
+    "Young people make up more than 60% of Sierra Leone's population, a source of enormous energy and potential. Yet many still struggle to find quality education, relevant skills and decent work, and too often they are left out of the decisions that shape their lives.",
+    "Aspire! Youth Empowerment and Innovation Hub was started by young change makers who wanted to answer these realities with a youth-led, youth-centered approach to sustainable development, social equity and community resilience.",
+    "Today our work is organized into three programs: Digital and Innovation, Leadership Development, and Advocacy Engagement. Together they help young people build skills, lead with confidence and speak up on the issues that matter to them."
+  ]
+    };
+
+export const mission = {
+  mission: "Promote a society where young people serve as catalysts of positive change through innovative leadership, digital skills, entrepreneurship and advocacy.",
+  vision:  "A world in which every youth has access to the opportunities, skills, resources and relationships they need to actualize their potential and contribute to positive change.",
+
+}
+
+export const values = [
+  { title: "Youth Power", text: "We believe in the limitless potential of young people and invest in them as the key to a brighter future." },
+  { title: "Creativity & Innovation", text: "Innovation is at the center of our work, and we keep adapting to the needs of the young people we serve." },
+  { title: "Youth Leadership", text: "Young people lead and shape our work and define their own action for change." },
+  { title: "Diversity", text: "We value difference and make sure our activities include young people from all communities." },
+  { title: "Education", text: "We create learning platforms that build the skills and confidence to make better decisions." },
+  { title: "Collaboration & Partnership", text: "We achieve more by working together with young people, volunteers, staff and partners." },
+  { title: "Accountability & Transparency", text: "We are answerable to participants, government and partners." },
+
+]
+
+export const team = {
+  board: "Board",
+  lead: {name: "David Kamara", title: "Founder & Executive Director"},
+  units: [
+    { title: "Programs",
+      lead: "Program Manager",
+      roles: [
+        "Program Officer, Digital and Innovation",
+        "Program Officer, Leadership Development",
+        "Program Officer, Advocacy Engagement",
+      ]
+    },  
+    
+    { title: "Admin and Finance", lead: "Admin and Finance Manager", roles: [ "Procurement Officer", "Finance Officer" ] },
+    { title: "Communication", lead: "Communication Cordinator", roles: [ "Communication Officer" ]  },
+    { title: "MEAL", lead: "MEAL Manager", roles: [ "Data Analyst" ]  },
+    { title: "Fundraising and Partnerships", lead: "Fundraising Coordinator", roles: [ "Partnerships Officer" ]  },
+  ],
+};
 
 export const impact = {
   headline: "Nearly five years in, the numbers keep moving.",
